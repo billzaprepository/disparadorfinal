@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-gray-100;
+    font-family: 'Orbitron', sans-serif;
+  }
+}
+
+@layer components {
+  .neon-border {
+    @apply border border-orange-500/50 shadow-[0_0_10px_rgba(255,165,0,0.3)];
+  }
+
+  .neon-text {
+    @apply text-orange-500 drop-shadow-[0_0_8px_rgba(255,165,0,0.5)];
+  }
+
+  .neon-button {
+    @apply bg-black border border-orange-500 text-orange-500 
+           shadow-[0_0_10px_rgba(255,165,0,0.3)]
+           hover:bg-orange-500/10 hover:shadow-[0_0_20px_rgba(255,165,0,0.5)]
+           transition-all duration-300;
+  }
+
+  .cyber-grid {
+    background-image: 
+      linear-gradient(to right, #1a1a1a 1px, transparent 1px),
+      linear-gradient(to bottom, #1a1a1a 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  .cyber-gradient {
+    @apply bg-gradient-to-br from-gray-900 via-gray-800 to-black;
+  }
+}
